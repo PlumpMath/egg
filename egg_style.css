@@ -1,0 +1,201 @@
+body {
+	background: #A3C2FF;
+	font-family: 'Nunito', sans-serif;
+	margin: 0px;
+	font-weight: 400;
+}
+
+#searchBar {
+	font-size: 30px;
+	height: 40px;
+	width: 100%;
+	padding: 5px;
+	padding-left: 15px;
+	background: white;
+	box-shadow: 0px 6px #293D66;
+	font-weight: 700;
+}
+
+#searchBar input[type="text"] {
+	display: inline;
+	width: calc(100% - 120px);
+	height: 30px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 30px;
+	border: none;
+	font-weight: 300;
+}
+
+#timerHolder {
+	padding: 20px;
+}
+
+.timerBox {
+	background: white;
+	width: 300px;
+	display: block;
+	float: left;
+	margin: 10px;
+	box-shadow: 0px 6px #000;
+	transition: opacity 0.5s, margin 0.5s;
+	margin-bottom: 20px;
+}
+
+.timerCircle {
+	background: #888;
+	width: 200px;
+	height: 200px;
+	margin: 45px;
+	border-radius: 125px;
+	border: 6px solid #aaa;
+	transition: width 0.1s, height 0.1s, margin 0.1s, border 0.1s;
+}
+
+.timerCircle:hover {
+	width: 210px;
+	height: 210px;
+	margin: 40px;
+	border: 6px solid #000; 
+}
+
+/*just another stupid hack*/
+.countdownText:hover + .timerCircle {
+	width: 210px;
+	height: 210px;
+	margin: 40px;
+	border: 6px solid #000; 
+} 
+
+.progressCircle {
+	background: #aaa;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	margin: 0%;
+	transition: background 0.1s;
+}
+
+.timerCircle:hover .progressCircle {
+	background: #000;
+}
+
+.countdownText:hover + .timerCircle .progressCircle {
+	background: #000;
+} 
+
+.countdownText {
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	margin-top: 120px;
+	margin-bottom: -170px;
+	display: float;
+	font-weight: 700;
+}
+
+.timerInfo {
+	font-size: 20px;
+	margin: 15px;
+	width: 250px;
+}
+
+
+/*COLOR SCHEMES*/
+/*RED*/
+.timerBox[timerStyle="red"] {
+	box-shadow: 0px 6px #E60000;
+}
+
+.timerBox[timerStyle="red"] .timerCircle {
+	background: #FF6666 !important;
+}
+
+.timerBox[timerStyle="red"] .timerCircle:hover {
+	border: 6px solid #E60000 !important;
+}
+
+.timerBox[timerStyle="red"][timerActive="true"] .timerCircle {
+	border: 6px solid #E60000 !important;
+}
+
+.timerBox[timerStyle="red"] .countdownText:hover + .timerCircle {
+	border: 6px solid #E60000 !important;
+}
+
+.timerBox[timerStyle="red"] .timerCircle:hover .progressCircle {
+	background: #E60000 !important;
+}
+
+.timerBox[timerStyle="red"] .countdownText:hover + .timerCircle .progressCircle {
+	background: #E60000 !important;
+}
+
+.timerBox[timerStyle="red"][timerActive="true"] .timerCircle .progressCircle {
+	background: #E60000 !important;
+}
+
+/*GREEN*/
+.timerBox[timerStyle="green"] {
+	box-shadow: 0px 6px #00B88A;
+}
+
+.timerBox[timerStyle="green"] .timerCircle { /*ALT COLOR*/
+	background: #66E0C2 !important;
+}
+
+.timerBox[timerStyle="green"] .timerCircle:hover {
+	border: 6px solid #00B88A !important;
+}
+
+.timerBox[timerStyle="green"][timerActive="true"] .timerCircle {
+	border: 6px solid #00B88A !important;
+}
+
+.timerBox[timerStyle="green"] .countdownText:hover + .timerCircle {
+	border: 6px solid #00B88A !important;
+}
+
+.timerBox[timerStyle="green"] .timerCircle:hover .progressCircle {
+	background: #00B88A !important;
+}
+
+.timerBox[timerStyle="green"] .countdownText:hover + .timerCircle .progressCircle {
+	background: #00B88A !important;
+}
+
+.timerBox[timerStyle="green"][timerActive="true"] .timerCircle .progressCircle {
+	background: #00B88A !important;
+}
+
+/*YELLOW*/
+.timerBox[timerStyle="yellow"] {
+	box-shadow: 0px 6px #FFCC00;
+}
+
+.timerBox[timerStyle="yellow"] .timerCircle { /*ALT COLOR*/
+	background: #FFF0B2 !important;
+}
+
+.timerBox[timerStyle="yellow"] .timerCircle:hover {
+	border: 6px solid #FFCC00 !important;
+}
+
+.timerBox[timerStyle="yellow"][timerActive="true"] .timerCircle {
+	border: 6px solid #FFCC00 !important;
+}
+
+.timerBox[timerStyle="yellow"] .countdownText:hover + .timerCircle {
+	border: 6px solid #FFCC00 !important;
+}
+
+.timerBox[timerStyle="yellow"] .timerCircle:hover .progressCircle {
+	background: #FFCC00 !important;
+}
+
+.timerBox[timerStyle="yellow"] .countdownText:hover + .timerCircle .progressCircle {
+	background: #FFCC00 !important;
+}
+
+.timerBox[timerStyle="yellow"][timerActive="true"] .timerCircle .progressCircle {
+	background: #FFCC00 !important;
+}
